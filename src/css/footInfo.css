@@ -1,0 +1,74 @@
+
+.foot{
+    display: flex;
+    flex-direction:row;
+    background: var(--clr-black2);
+    justify-content: space-between;
+}
+.footInfo{
+    display: flex;
+    flex-direction:row;
+    padding: 1.5rem;
+    position: static;  
+ 
+}
+.contact_us{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.building{
+    display: flex;
+    flex-direction: row;
+    padding: 0 3rem 0 0;
+}
+
+.building .img{
+    width: 15rem;
+    position: relative;
+}
+
+.addy{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+  
+}
+
+.addy p.way {
+    font-size:11px;
+    text-transform: capitalize;
+    margin-bottom: 1em;
+    letter-spacing: .09rem;
+    color: var(--clr-white);
+}
+.footInfo .info{
+        margin: 0 1.9rem 0 0;
+        justify-content: space-between;
+}
+
+h5.heading, div.heading h5 {
+    color: var(--clr-white);
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: .1rem;
+    padding-bottom: 1rem;
+}
+
+h6.heading2, a h6{
+    color: var(--clr-white);
+    padding-top:0.25rem;
+    font-weight: 400;  
+  
+}
+
+@media (max-width: 776px) {
+    .foot{
+        flex-direction:column;
+    }
+    .img{
+        width: 10rem;
+    }
+    
+}

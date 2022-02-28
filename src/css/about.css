@@ -1,0 +1,38 @@
+.page{
+display: flex;
+flex-direction:row;
+gap: 4rem;
+justify-content:center;
+}
+
+.page img {
+  width: 29%;
+  display: block;
+  object-fit: fill;
+  margin-top:2rem;
+}
+  
+.page article{
+  height:65%;
+  width:45%;
+  margin-top:3rem;
+  padding-top: 2rem;
+}
+
+p.about {
+  line-height: 2;
+  max-width: 45em;
+  padding-top: 2rem;
+  color: var(--clr-grey-5);
+  /* margin-bottom: 2rem; */
+}
+.page .title {
+  text-align: left;
+}
+span{
+  font-weight:bold;
+}
+
+@media (min-width: 992px) {
+  /* grid-template-columns: 1fr 1fr; */
+}

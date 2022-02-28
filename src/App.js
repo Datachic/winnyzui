@@ -1,6 +1,9 @@
+
+import { Navbar, Sidebar, Footer } from './components'
 import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import {About, Cart, Checkout, Error, Home, Products, SingleProduct, Private} from './pages'
+import FootInfo from './components/FootInfo';
 
 class LambdaDemo extends Component {
   constructor(props) {
@@ -31,20 +34,31 @@ class LambdaDemo extends Component {
   }
 }
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
-      </div>
-    )
-  }
+function App() {
+  return <>
+  {/* <p> Edit <code>src/App.js</code> and save to reload.  </p>
+        <LambdaDemo />     
+        
+         */}
+  <Router>
+  <Navbar />
+  <Sidebar />
+  <Routes>
+  <Route path='/products:id' element={<SingleProduct/>} />
+  <Route path='/products' element={<Products/>} />
+  <Route path='/checkout' element={<Checkout/>} />
+  <Route path='/private' element={<Private/>} />
+  <Route path='/about' element={<About/>} />
+  <Route path='/cart' element={<Cart/>} />
+  <Route path='/*' element={<Error/>} />
+  <Route path='/' element={<Home />} />
+  </Routes>
+  <FootInfo/>
+  <Footer />
+  </Router>
+    
+  </>
+  
+  
 }
-
-export default App
+export default App;
